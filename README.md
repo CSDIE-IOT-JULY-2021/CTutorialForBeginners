@@ -1,7 +1,5 @@
 # C Tutorial For Beginners
 
-* [Installing CDT In Eclipse](#installing-cdt-in-eclipse)
-* [Online Editors](#online-editors)
 * [All Code Examples](#all-code-examples)
   - [Hello World](#hello-world)
   - [First Variable](#first-variable)
@@ -24,19 +22,7 @@
   - [Prime Number Program](#prime-number-program)
   - [Number of digits in a number](#number-of-digits-in-a-number)
   - [Sum of Digits Program](#sum-of-digits-program)
-  - [Write to a file](#write-to-a-file)
-  - [Read From File](#read-from-file)
-* [About in28Minutes](#about-in28minutes)
-  - [Our Beliefs](#our-beliefs)
-  - [Our Approach](#our-approach)
-  - [Find Us](#useful-links)
 
-##Installing CDT In Eclipse
-https://www3.ntu.edu.sg/home/ehchua/programming/howto/EclipseCpp_HowTo.html
-
-##Online Editors
- - http://www.tutorialspoint.com/compile_c_online.php
- - https://www.google.co.in/search?q=c+online+compiler
 
 #All Code Examples
 #Hello World
@@ -695,85 +681,6 @@ int main()
 }
 
 ```
-#Write to a file
-```
-#include <stdio.h>
-
-struct Student
-{
-	char name[100];
-	int marks;
-	int year;
-};
-
-void writeStudentToFile(struct Student student)
-{
-	//Get a pointer to the opened file
-	// w   1 = 1
-	// r
-	// a - 5 + 1 = 6
-	FILE *fp = fopen("Student.dat","w");
-
-	//Write to the file
-	fprintf(fp,"%s %d %d\n",student.name,student.marks,student.year);
-
-	//Close the file
-	fclose(fp);
-}
-
-int main()
-{
-	struct Student student =
-		{"in28Minutes",100,4};
-
-	writeStudentToFile(student);
-}
-
-```
-#Read From File
-```
-#include <stdio.h>
-
-struct Student
-{
-	char name[100];
-	int marks;
-	int year;
-};
-
-struct Student readStudentFromFile()
-{
-	//Get a pointer to the opened file
-	FILE *fp = fopen("Student.dat","r");
-	struct Student student;
-
-	//Read from the file
-	fscanf(fp,"%s %d %d\n",student.name,&student.marks,&student.year);
-
-	//Close the file
-	fclose(fp);
-
-	return student;
-}
-
-void printStudent(struct Student student)
-{
-	printf("%s %d %d\n",student.name,student.marks,student.year);
-}
-
-int main()
-{
-	struct Student student = readStudentFromFile();
-	printStudent(student);
-}
-
-```
-
-##About in28Minutes
-- At in28Minutes, we ask ourselves one question everyday. How do we create more effective trainings?
-- We use Problem-Solution based Step-By-Step Hands-on Approach With Practical, Real World Application Examples. 
-- Our success on Udemy and Youtube (2 Million Views & 12K Subscribers) speaks volumes about the success of our approach.
-- While our primary expertise is on Development, Design & Architecture Java & Related Frameworks (Spring, Struts, Hibernate) we are expanding into the front-end world (Bootstrap, JQuery, Angular JS). 
 
 ###Our Beliefs
 - Best Course are interactive and fun.
@@ -785,42 +692,4 @@ int main()
 - We use 80-20 Rule. We discuss 20% things used 80% of time in depth. We touch upon other things briefly equipping you with enough knowledge to find out more on your own. 
 - We will be developing a demo application in the course, which could be reused in your projects, saving hours of your effort.
 - All the code is available on Github, for most steps.
-
-###Useful Links
-- [Our Website](http://www.in28minutes.com)
-- [Youtube Courses](https://www.youtube.com/user/rithustutorials/playlists)
-- [Udemy Courses](https://www.udemy.com/user/in28minutes/)
-- [Facebook](http://facebook.com/in28minutes)
-- [Twitter](http://twitter.com/in28minutes)
-- [Google Plus](https://plus.google.com/u/3/110861829188024231119)
-
-###Other Courses
-- [Spring Framework](https://www.udemy.com/spring-tutorial-for-beginners/)
-- [Maven](http://www.in28minutes.com/p/maven-tutorial-for-beginners.html)
-- [Eclipse](http://www.in28minutes.com/p/eclipse-java-video-tutorial.html)
-- Java
-  * [Java](https://www.youtube.com/watch?v=Y4ftqcYVh5I&list=PLE0D4634AE2DFA591&index=1)
-  * [Java Collections](http://www.in28minutes.com/p/java-collections-framework-video.html)
-  * [Java OOPS Concepts](https://www.udemy.com/learn-object-oriented-programming-in-java/) 
-- [Design Patterns](http://www.in28minutes.com/p/design-patterns-tutorial.html)
-- [JUnit](https://www.udemy.com/junit-tutorial-for-beginners-with-java-examples/)
-- [C](https://www.udemy.com/c-tutorial-for-beginners-with-puzzles/)
-- [C Puzzles](https://www.udemy.com/c-puzzles-for-beginners/)
-- [Javascript](https://www.youtube.com/watch?v=6TZdD-FR6CY)
-- [More Courses on Udemy](https://www.udemy.com/user/in28minutes/)
-  * Java Servlets and JSP : Your first web application in 25 Steps
-  * Learn Spring MVC in 25 Steps 
-  * Learn Struts in 25 Steps 
-  * Learn Hibernate in 25 Steps
-  * 10 Steps to Professional Java Developer
-- [Java Interview Guide](http://www.in28minutes.com/p/buy-our-java-interview-guide.html)
-  * Core Java
-  * Advanced Java
-  * Spring, Spring MVC
-  * Struts
-  * Hibernate
-  * Design Patterns
-  * 400+ Questions
-  * 23 Videos
-  
   
